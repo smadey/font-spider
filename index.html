@@ -1,79 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Font-spider : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Font-spider</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/aui/font-spider">View on GitHub</a>
-
-          <h1 id="project_title">Font-spider</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/aui/font-spider/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/aui/font-spider/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>字蛛（FontSpider）</title>
+    <link href="css/style.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <div class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="index.html">字蛛FontSpider</a>
+            </h1>
+            <div class="menu">
+                <ul>
+                    <li><a href="#feature" class="menu-item">特性</a></li>
+                    <li><a href="#elements" class="menu-item">原理</a></li>
+                    <li><a href="#install" class="menu-item">安装</a></li>
+                    <li><a href="#use" class="menu-item">使用</a></li>
+                    <li><a href="#source" class="menu-item">源码</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <div id="banner" class="card banner">
+        <div class="inner">
+            <div class="banner-img">
+                <img width="1000" height="240" src="./img/banner-img.png">
+            </div>
+            <div class="content">
+                <h2>字蛛—中文WebFont压缩器</h2>
+                <p>让网页自由嵌入中文字体成为可能</p> 
+            </div> 
+        </div>
+    </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+    <div id="feature" class="card card-a">
+        <div class="inner">
+            <h3>特性<span class="ico ico-end-big"></span></h3>
+            <div class="ct-text-box">
+                <ul>
+                    <li>1. 轻巧：数 MB 的中文字体可被压成几十 KB</li>
+                    <li>2. 简单：完全基于 CSS，无需 js 与服务端支持</li>
+                    <li>3. 兼容：自动转码，支持 IE 与标准化的浏览器</li>
+                    <li>4. 自然：文本支持选中、搜索、翻译、朗读、缩放</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+    <div id="elements" class="card card-b">
+        <div class="inner">
+            <h3>原理<span class="ico ico-end-big"></span></h3>
+            <div class="ct-text-box">
+                <ul>
+                    <li>1. 构建 CSS 语法树，提取字体路径与选择器规则</li>
+                    <li>2. 使用包含 WebFont 的 CSS 选择器索引站点的文本</li>
+                    <li>3. 删除 WebFont 中没有使用到的字符</li>
+                    <li>4. 转码成跨浏览器使用的字体格式</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="install" class="card card-a">
+        <div class="inner">
+            <h3>安装<span class="ico ico-end-big"></span></h3>
+            <div class="ct-text-box">
+                <p>先安装好 NodeJS，然后执行：</p>
+
+                <pre><code>npm install font-spider -g</code></pre>
+                <blockquote>
+                    <p>- Windows 下运行需要安装 <a href="http://www.perl.org">perl</a> 才能运行</p>
+                    <p>- GruntJS 用户可使用 <a href="install.html">gruntjs 插件</a></p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div id="use" class="card card-b">
+        <div class="inner">
+            <h3>使用<span class="ico ico-end-big"></span></h3>
+            <div class="ct-text-box">
+                <h4>在 CSS 中使用 WebFont：</h4>
+                <pre><code>/*声明 WebFont*/
+@font-face {
+  font-family: 'pinghei';
+  src: url('../font/pinghei.eot');
+  src:
+    url('../font/pinghei.eot?#font-spider') format('embedded-opentype'),
+    url('../font/pinghei.woff') format('woff') 
+    url('../font/pinghei.ttf') format('truetype'),
+    url('../font/pinghei.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*使用选择器指定字体*/
+.home h1, .demo > .test {
+    font-family: 'pinghei';
+}
 </code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+                <blockquote>
+                    <p>1. @font-face 中的 src 定义的 .ttf 文件必须存在，其余的格式将由工具自动生成</p>
+                    <p>2. 开发阶段请使用相对路径的 CSS 与 WebFont</p>
+                </blockquote>
+                <h4>运行 font-spider 命令：</h4>
+                <pre><code>font-spider ./demo/*.html</code></pre>
+                <blockquote>
+                    <p>演示项目下载 <a href="download/demo.zip">demo.zip</a></p>
+                </blockquote>
+            </div>
+        </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Font-spider maintained by <a href="https://github.com/aui">aui</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div id="source" class="card card-a">
+        <div class="inner">
+            <h3>源码<span class="ico ico-end-big"></span></h3>
+            <div class="ct-text-box">
+                <p><a href="https://github.com/aui/font-spider">https://github.com/aui/font-spider</a></p>
+            </div>
+        </div>
     </div>
 
-    
+    <div class="footer">
+        <div class="inner">
+            <p>© 2014 <span class="name">FONT SPIDER.</span> ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    (function () {
+        var resize = function () {
+            var winHeight = document.documentElement.clientHeight;
+            document.getElementById('banner').style.height = winHeight + 'px';
+        };
 
-  </body>
+        window.onresize = resize;
+        resize();
+    })();
+    </script>
+</body>
 </html>
