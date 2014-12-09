@@ -75,8 +75,7 @@ a:focus {outline:none}
 /*公用*/
 .inner
 {
-    max-width: 960px;
-    padding: 0 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .card {
