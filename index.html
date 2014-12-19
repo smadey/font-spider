@@ -14,8 +14,7 @@
             </h1>
             <div class="menu">
                 <ul>
-                    <li><a href="#feature" class="menu-item">特性</a></li>
-                    <li><a href="#elements" class="menu-item">原理</a></li>
+                    <li><a href="#about" class="menu-item">特性</a></li>
                     <li><a href="#install" class="menu-item">安装</a></li>
                     <li><a href="#use" class="menu-item">使用</a></li>
                     <li><a href="#source" class="menu-item">源码</a></li>
@@ -30,45 +29,27 @@
                 <img width="1000" height="240" src="./img/banner-img.png">
             </div>
             <div class="content">
-                <h2>字蛛—中文WebFont压缩器</h2>
-                <p>让网页自由嵌入中文字体成为可能</p> 
+                <h2>字蛛—中文字体压缩器</h2>
+                <p>中文 WebFont 工程化解决方案</p> 
             </div> 
         </div>
     </div>
 
-    <div id="feature" class="card card-a">
+    <div id="about" class="card card-a">
         <div class="inner">
-            <h3>特性<span class="ico ico-end-big"></span></h3>
-            <div class="ct-text-box">
-                <ul>
-                    <li>1. 轻巧：数 MB 的中文字体可被压成几十 KB</li>
-                    <li>2. 简单：完全基于 CSS，无需 js 与服务端支持</li>
-                    <li>3. 兼容：自动转码，支持 IE 与标准化的浏览器</li>
-                    <li>4. 自然：文本支持选中、搜索、翻译、朗读、缩放</li>
-                </ul>
+            <h3 style="display:none">特性<span class="ico ico-end-big"></span></h3>
+            <div class="ct-text-box about">
+                <p><img src="img/window.jpg" alt="window" width="612" height="464"></p>
+                <p>字蛛通过分析本地 CSS 与 HTML 文档获取字体没有使用的字符，并进行高效的压缩与转码，这一切完全自动化。</p>
             </div>
         </div>
     </div>
 
-    <div id="elements" class="card card-b">
-        <div class="inner">
-            <h3>原理<span class="ico ico-end-big"></span></h3>
-            <div class="ct-text-box">
-                <ul>
-                    <li>1. 构建 CSS 语法树，提取字体路径与选择器规则</li>
-                    <li>2. 使用包含 WebFont 的 CSS 选择器索引站点的文本</li>
-                    <li>3. 删除 WebFont 中没有使用到的字符</li>
-                    <li>4. 转码成跨浏览器使用的字体格式</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="install" class="card card-a">
+    <div id="install" class="card card-b">
         <div class="inner">
             <h3>安装<span class="ico ico-end-big"></span></h3>
             <div class="ct-text-box">
-                <p>先安装好 NodeJS，然后执行：</p>
+                <h4>先安装好 NodeJS，然后执行：</h4>
 
                 <pre><code>npm install font-spider -g</code></pre>
                 <blockquote>
@@ -79,7 +60,7 @@
         </div>
     </div>
 
-    <div id="use" class="card card-b">
+    <div id="use" class="card card-a">
         <div class="inner">
             <h3>使用<span class="ico ico-end-big"></span></h3>
             <div class="ct-text-box">
@@ -127,6 +108,7 @@
     <div class="footer">
         <div class="inner">
             <p>© 2014 <span class="name">FONT SPIDER.</span> ALL RIGHTS RESERVED.</p>
+            <p style="margin-top:20px"><a href="http://www.weibo.com/u/5410683206" title="字蛛团队官方微博"><img src="./img/weibo_24x24.png" alt="微博图标"></a></p>
         </div>
     </div>
     <script type="text/javascript">
@@ -140,5 +122,12 @@
         resize();
     })();
     </script>
+
+    <div style="display:none">
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb13d4b52f0984285ed05624f0a24a69b' type='text/javascript'%3E%3C/script%3E"));
+        </script>  
+    </div>
 </body>
 </html>

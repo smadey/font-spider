@@ -6,32 +6,32 @@
  *
  */
 @font-face {
-  font-family: 'FZLTCXHJW';
+  font-family: 'anjingchen';
   /*IE*/
-  src: url('../font/FZLTCXHJW.eot');
+  src: url('../font/anjingchen.eot');
   /*现代浏览器*/
   src:
-    url('../font/FZLTCXHJW.eot?#font-spider') format('embedded-opentype'),
-    url('../font/FZLTCXHJW.woff') format('woff') 
-    url('../font/FZLTCXHJW.ttf') format('truetype'),
-    url('../font/FZLTCXHJW.svg') format('svg');
+    url('../font/anjingchen.eot?#font-spider') format('embedded-opentype'),
+    url('../font/anjingchen.woff') format('woff') 
+    url('../font/anjingchen.ttf') format('truetype'),
+    url('../font/anjingchen.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'FZY1JW';
-  src: url('../font/FZY1JW.eot');
+  font-family: 'xiaofeng';
+  src: url('../font/xiaofeng.eot');
   src:
-    url('../font/FZY1JW.eot?#font-spider') format('embedded-opentype'),
-    url('../font/FZY1JW.woff') format('woff') 
-    url('../font/FZY1JW.ttf') format('truetype'),
-    url('../font/FZY1JW.svg') format('svg');
+    url('../font/xiaofeng.eot?#font-spider') format('embedded-opentype'),
+    url('../font/xiaofeng.woff') format('woff') 
+    url('../font/xiaofeng.ttf') format('truetype'),
+    url('../font/xiaofeng.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 
-html {font-size:62.5%; font-family: Helvetica, arial, sans-serif; }
+html {font-size:62.5%; font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr {margin:0;padding:0}
 body{line-height:1.333;font-size:12px}
 h1,h2,h3,h4,h5,h6{font-size:100%;}
@@ -94,7 +94,7 @@ a:focus {outline:none}
     height: 65px;
     background: #c82e2e;
     padding-top: 40px;
-    font-family: 'FZLTCXHJW';
+    font-size: 14px;
 }
 .header .logo
 {
@@ -161,18 +161,17 @@ a:focus {outline:none}
 }
 .banner h2
 {
-    font-size: 70px;
+    font-size: 80px;
     color: #fff;
     font-weight: normal;
-    font-family: 'FZY1JW';
+    font-family: 'xiaofeng', 'Times New Roman', Times, serif;
     margin:0 0 40px 0;
 }
 .banner p
 {
-    font-size: 30px;
+    font-size: 24px;
     color: #fff;
     line-height: 50px;
-    font-family: 'FZLTCXHJW';
 }
 .banner .ico-drag
 {
@@ -199,15 +198,17 @@ a:focus {outline:none}
 .card h3
 {
     color: #c22a2a;
-    font-family: 'FZY1JW';
-    font-size: 70px;
+    font-family: 'xiaofeng';
+    font-size: 80px;
     font-weight: normal;
     text-align: center;
     position: relative;
     margin-bottom: 40px;
 }
 .card h4 {
-    font-family: 'FZLTCXHJW';
+    text-align: center;
+    font-size: 30px;
+    font-family: 'anjingchen';
 }
 .card h3 .ico-end-big
 {
@@ -216,7 +217,7 @@ a:focus {outline:none}
     width: 23px;
     height: 24px;
     vertical-align: bottom;
-    margin: 0 0 15px 10px;
+    margin: 0 0 20px 10px;
 }
 .card .ct-text-box
 {   
@@ -227,8 +228,15 @@ a:focus {outline:none}
     color: #272727;
     line-height: 70px;
 }
-.card .ct-text-box > p, .card .ct-text-box > ul, .card .ct-text-box > ol {
-    font-family: 'FZLTCXHJW';
+.card .ct-text-box.about
+{
+    font-size: 24px;
+    line-height: 2.4em;
+    max-width: 612px;
+}
+.card .ct-text-box li {
+    
+    color: #333;
 }
 .card pre
 {
