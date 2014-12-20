@@ -313,8 +313,14 @@ a:focus {outline:none}
     .inner {
         padding: 0 15px;
     }
+    .header {
+        text-align: center;
+    }
     .header .menu  {
         display: none;
+    }
+    .banner {
+        margin-top: 30px;
     }
     .banner .banner-img {
         display: none;
@@ -335,6 +341,9 @@ a:focus {outline:none}
     .card h4 {
         text-align: left;
         font-size: 24px;
+    }
+    .card h3 {
+        font-size: 50px;
     }
     .about img {
         width: 100%;
