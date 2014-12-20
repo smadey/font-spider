@@ -353,7 +353,12 @@ a:focus {outline:none}
         display: block;
         min-width: 0;
         max-width: auto;
+        padding: 5px 15px;
     }
+    .card blockquote {
+       padding: 5px 15px; 
+    }
+
     .link {
         text-align: center;
     }
