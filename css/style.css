@@ -33,7 +33,6 @@
 
 html {font-size:62.5%; font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr {margin:0;padding:0}
-body{line-height:1.333;font-size:12px}
 h1,h2,h3,h4,h5,h6{font-size:100%;}
 input,textarea,select,button{font-size:12px;font-weight:normal}
 input[type="button"],input[type="submit"],select,button{cursor:pointer}
@@ -55,6 +54,8 @@ hr{height:0}
 label{cursor:pointer}
 
 body {
+    font-size: 16px;
+    font-size: 1.6rem;
     height: 100%;
     background: #c82e2e;
 }
@@ -241,6 +242,7 @@ a:focus {outline:none}
 .card pre
 {
     min-width: 700px;
+    overflow: auto;
     padding: 5px 20px;
 }
 .card pre, .card pre code {
@@ -305,4 +307,37 @@ a:focus {outline:none}
 .footer .name
 {
     color: #c22a2a;
+}
+
+@media screen and (max-width: 48em) {
+    .inner {
+        padding: 0 30px;
+    }
+    .header .menu ul li {
+        margin-left: 30px;
+    }
+    .banner .banner-img {
+        text-align: center;
+        height: 40%;
+    }
+    .banner .banner-img img {
+        position: inherit;
+        width: 90%;
+        height: auto;
+    }
+    .card .ct-text-box {
+        display: block;
+    }
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+    .card pre {
+        display: block;
+        min-width: 0;
+        max-width: auto;
+    }
+    .link {
+        text-align: center;
+    }
 }
