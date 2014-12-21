@@ -361,5 +361,6 @@ a:focus {outline:none}
 
     .link {
         text-align: center;
+        font-size: 12px;
     }
 }
