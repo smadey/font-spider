@@ -330,6 +330,9 @@ a:focus {outline:none}
     .banner h2 {
         font-size: 50px;
     }
+    .banner p {
+        font-size: 14px;
+    }
     .banner .banner-img img {
         position: inherit;
         width: 90%;
