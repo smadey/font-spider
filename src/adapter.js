@@ -21,6 +21,12 @@ Adapter.prototype = {
     constructor: Adapter,
 
     /**
+     * 输出目录
+     * @type    {String}
+     */
+    output: null,
+
+    /**
      * 忽略加载的文件规则（支持正则）- 与 `resourceIgnore` 参数互斥
      * @type    {Array<String>}
      */

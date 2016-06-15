@@ -55,14 +55,18 @@ function Compress(webFont, options) {
         }
 
 
-        // 备份字体与恢复备份
-        this.backup(function(errors) {
-            if (errors) {
-                done(errors);
-            } else {
-                this.min(done);
-            }
-        }.bind(this));
+        if (this.options.output) {
+            this.min(done);
+        } else {
+            // 备份字体与恢复备份
+            this.backup(function(errors) {
+                if (errors) {
+                    done(errors);
+                } else {
+                    this.min(done);
+                }
+            }.bind(this));
+        }
 
 
 
@@ -189,7 +193,12 @@ Compress.prototype = {
         }));
 
 
-        fontmin.dest(dirname);
+        if (this.options.output) {
+            var fontname = dirname.split(path.sep).pop();
+            fontmin.dest(path.join(this.options.output, fontname));
+        } else {
+            fontmin.dest(dirname);
+        }
         fontmin.run(function(errors, buffer) {
 
             if (errors) {

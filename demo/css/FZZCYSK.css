@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: "FZZCYSK";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/FZZCYSK/FZZCYSK.eot'); /* IE9*/
+    src: url('../fonts/FZZCYSK/FZZCYSK.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/FZZCYSK/FZZCYSK.woff2') format('woff2'),
+         url('../fonts/FZZCYSK/FZZCYSK.woff') format('woff'), /* chrome, firefox */
+         url('../fonts/FZZCYSK/FZZCYSK.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+         url('../fonts/FZZCYSK/FZZCYSK.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.FZZCYSK {
+    display: inline-block;
+    font: normal normal normal 14px/1 'FZZCYSK';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke-width: 0.1px;
+}

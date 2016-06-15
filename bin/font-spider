@@ -18,6 +18,7 @@ var compressor = fontSpider.compressor;
 program
     .version(require('../package.json').version)
     .usage('[options] <htmlFile ...>')
+    .option('--output <dirname>', 'output dir')
     .option('--info', 'show only webfont information')
     .option('--ignore <pattern>', 'ignore the files', list)
     .option('--map <remotePath,localPath>', 'mapping the remote path to the local', toMap)
@@ -36,6 +37,7 @@ var options = new Adapter({
     }
 });
 
+console.log(options); // eslint-disable-line no-console
 
 
 if (!htmlFiles.length) {
